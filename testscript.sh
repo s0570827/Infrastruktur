@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-now=$(date)
-echo „$now“ >> ~/testlog.txt
+now=$(date) && echo „$now“ >> /home/ubuntu/testlog.txt
