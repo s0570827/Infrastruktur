@@ -1,4 +1,6 @@
 #!usr/bin/env bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
 /usr/bin/aws dynamodb scan --table-name URL_DB | /usr/bin/jq '.' > /home/ubuntu/urls.json
 
 for n in $(seq $(/usr/bin/jq '.Count' /home/ubuntu/urls.json))
